@@ -1,16 +1,7 @@
-# This is a sample Python script.
+from src.hh_api import get_vacancies_hh
+from src.fill_db import main as fill_db
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    employers_id = [3776, 906557, 1740, 78638, 80, 39305, 139, 4649269, 2575750, 6120481]
+    get_vacancies_hh(employers_id, 'python')
+    fill_db("database.ini", "queries.sql", "vacancies.json")
