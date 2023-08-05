@@ -3,7 +3,7 @@ import requests
 import os
 
 
-def get_vacancies_hh(employers_id: list, keyword: str, page=3, per_page=100):
+def get_vacancies_hh(employers_id: list, keyword: str, page=1, per_page=100):
     """
     На вход получает список id работодателей и ключевое слово для поиска.
     Обращается к сайту HH, после получения ответа записывает полученные вакансии

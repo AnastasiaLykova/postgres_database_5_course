@@ -3,8 +3,8 @@ from src.config import config
 
 
 class DBManager:
-    def __init__(self):
-        params = config()
+    def __init__(self, filename):
+        params = config(filename)
         conn = psycopg2.connect(dbname='vacancy_db', **params)
         conn.autocommit = True
         self.cur = conn.cursor()
