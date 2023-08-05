@@ -1,15 +1,15 @@
 import json
 import psycopg2
-from config import config
+from src.config import config
 import os
 
 
-def main():
-    script_file = os.path.join("..", "queries.sql")
-    json_file = os.path.join("..", "vacancies.json")
+def main(filename=os.path.join("..", "database.ini"),
+         script_file=os.path.join("..", "queries.sql"),
+         json_file=os.path.join("..", "vacancies.json")):
     db_name = 'vacancy_db'
 
-    params = config()
+    params = config(filename)
     conn = None
 
     create_database(params, db_name)
