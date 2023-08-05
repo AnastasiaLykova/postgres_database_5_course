@@ -1,9 +1,10 @@
 import psycopg2
 from src.config import config
+import os
 
 
 class DBManager:
-    def __init__(self, filename):
+    def __init__(self, filename=os.path.join("..", "database.ini")):
         params = config(filename)
         conn = psycopg2.connect(dbname='vacancy_db', **params)
         conn.autocommit = True
