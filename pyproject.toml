@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "postgres-database-5-course"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "postgres_database_5_course"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+psycopg2 = "^2.9.6"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
